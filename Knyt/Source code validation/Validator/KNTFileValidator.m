@@ -28,6 +28,7 @@
 #import "KNTThreeLetterClassPrefixRule.h"
 #import "KNTInstanceTypeNotIdRule.h"
 #import "KNTDeallocBeforeInitRule.h"
+#import "KNTLiteralsRule.h"
 
 @implementation KNTFileValidator
 
@@ -47,7 +48,8 @@
                         [KNTCGGeometryRule class],
                         [KNTThreeLetterClassPrefixRule class],
                         [KNTInstanceTypeNotIdRule class],
-                        [KNTDeallocBeforeInitRule class]
+                        [KNTDeallocBeforeInitRule class],
+                        [KNTLiteralsRule class]
         ];
     });
     

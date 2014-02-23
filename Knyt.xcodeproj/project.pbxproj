@@ -38,6 +38,7 @@
 		E9AA035418B9F676000246DE /* KNTRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA033B18B9F653000246DE /* KNTRule.m */; };
 		E9AA035518B9F67E000246DE /* KNTRuleFailure.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA033D18B9F653000246DE /* KNTRuleFailure.m */; };
 		E9AA035818B9FCE5000246DE /* KNTDeallocBeforeInitRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA035718B9FCE5000246DE /* KNTDeallocBeforeInitRule.m */; };
+		E9AA035C18BA0BED000246DE /* KNTLiteralsRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA035B18BA0BED000246DE /* KNTLiteralsRule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,8 @@
 		E9AA033D18B9F653000246DE /* KNTRuleFailure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTRuleFailure.m; sourceTree = "<group>"; };
 		E9AA035618B9FCE5000246DE /* KNTDeallocBeforeInitRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNTDeallocBeforeInitRule.h; sourceTree = "<group>"; };
 		E9AA035718B9FCE5000246DE /* KNTDeallocBeforeInitRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTDeallocBeforeInitRule.m; sourceTree = "<group>"; };
+		E9AA035A18BA0BED000246DE /* KNTLiteralsRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KNTLiteralsRule.h; path = Literals/KNTLiteralsRule.h; sourceTree = "<group>"; };
+		E9AA035B18BA0BED000246DE /* KNTLiteralsRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KNTLiteralsRule.m; path = Literals/KNTLiteralsRule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +258,7 @@
 				E9AA032018B9F653000246DE /* Enumerated types */,
 				E9AA032318B9F653000246DE /* Extras */,
 				E9AA032718B9F653000246DE /* init and dealloc */,
+				E9AA035918BA0BD8000246DE /* Literals */,
 				E9AA032A18B9F653000246DE /* Methods */,
 				E9AA032D18B9F653000246DE /* Naming */,
 				E9AA033018B9F653000246DE /* Spacing */,
@@ -370,6 +374,15 @@
 			path = Validator;
 			sourceTree = "<group>";
 		};
+		E9AA035918BA0BD8000246DE /* Literals */ = {
+			isa = PBXGroup;
+			children = (
+				E9AA035A18BA0BED000246DE /* KNTLiteralsRule.h */,
+				E9AA035B18BA0BED000246DE /* KNTLiteralsRule.m */,
+			);
+			name = Literals;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -477,6 +490,7 @@
 				E9AA033F18B9F653000246DE /* KNTArgumentParser.m in Sources */,
 				E9AA034C18B9F653000246DE /* KNTFourSpacesRule.m in Sources */,
 				E9AA034218B9F653000246DE /* NSString+KNT.m in Sources */,
+				E9AA035C18BA0BED000246DE /* KNTLiteralsRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
