@@ -29,7 +29,7 @@ typedef NSString*(^KNTRuleLineValidator)(NSString * line,NSUInteger lineNumber, 
 @interface KNTRule : NSObject
 
 /**
- @return YES, by default
+ @return (YES, by default) N.B. CURRENTLY RETURNING NO DUE TO LINE NUMBER ISSUES WITH REMOVED COMMENTS
  */
 + (BOOL)discardCommentsForProcessing;
 

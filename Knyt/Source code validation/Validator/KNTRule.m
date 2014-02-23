@@ -19,7 +19,7 @@
 @implementation KNTRule
 
 + (BOOL)discardCommentsForProcessing {
-    return YES;
+    return NO;
 }
 
 + (NSArray*)validateSource:(NSString *)source filename:(NSString *)filename {
