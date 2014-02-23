@@ -39,6 +39,7 @@
 		E9AA035518B9F67E000246DE /* KNTRuleFailure.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA033D18B9F653000246DE /* KNTRuleFailure.m */; };
 		E9AA035818B9FCE5000246DE /* KNTDeallocBeforeInitRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA035718B9FCE5000246DE /* KNTDeallocBeforeInitRule.m */; };
 		E9AA035C18BA0BED000246DE /* KNTLiteralsRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA035B18BA0BED000246DE /* KNTLiteralsRule.m */; };
+		E9AA036018BA1079000246DE /* KNTDefinedConstantsRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA035F18BA1079000246DE /* KNTDefinedConstantsRule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		E9AA035718B9FCE5000246DE /* KNTDeallocBeforeInitRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTDeallocBeforeInitRule.m; sourceTree = "<group>"; };
 		E9AA035A18BA0BED000246DE /* KNTLiteralsRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KNTLiteralsRule.h; path = Literals/KNTLiteralsRule.h; sourceTree = "<group>"; };
 		E9AA035B18BA0BED000246DE /* KNTLiteralsRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KNTLiteralsRule.m; path = Literals/KNTLiteralsRule.m; sourceTree = "<group>"; };
+		E9AA035E18BA1079000246DE /* KNTDefinedConstantsRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KNTDefinedConstantsRule.h; path = Constants/KNTDefinedConstantsRule.h; sourceTree = "<group>"; };
+		E9AA035F18BA1079000246DE /* KNTDefinedConstantsRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KNTDefinedConstantsRule.m; path = Constants/KNTDefinedConstantsRule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +258,7 @@
 				E9AA031718B9F653000246DE /* Booleans */,
 				E9AA031A18B9F653000246DE /* CGGeometry functions */,
 				E9AA031D18B9F653000246DE /* Conditionals */,
+				E9AA035D18BA1052000246DE /* Constants */,
 				E9AA032018B9F653000246DE /* Enumerated types */,
 				E9AA032318B9F653000246DE /* Extras */,
 				E9AA032718B9F653000246DE /* init and dealloc */,
@@ -383,6 +387,15 @@
 			name = Literals;
 			sourceTree = "<group>";
 		};
+		E9AA035D18BA1052000246DE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E9AA035E18BA1079000246DE /* KNTDefinedConstantsRule.h */,
+				E9AA035F18BA1079000246DE /* KNTDefinedConstantsRule.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -487,6 +500,7 @@
 				E9AA034518B9F653000246DE /* KNTNoOneLinersRule.m in Sources */,
 				E9AA028118B8D772000246DE /* main.m in Sources */,
 				E9AA035818B9FCE5000246DE /* KNTDeallocBeforeInitRule.m in Sources */,
+				E9AA036018BA1079000246DE /* KNTDefinedConstantsRule.m in Sources */,
 				E9AA033F18B9F653000246DE /* KNTArgumentParser.m in Sources */,
 				E9AA034C18B9F653000246DE /* KNTFourSpacesRule.m in Sources */,
 				E9AA034218B9F653000246DE /* NSString+KNT.m in Sources */,
