@@ -37,6 +37,7 @@
 		E9AA035318B9F66D000246DE /* KNTFourSpacesRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA033418B9F653000246DE /* KNTFourSpacesRule.m */; };
 		E9AA035418B9F676000246DE /* KNTRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA033B18B9F653000246DE /* KNTRule.m */; };
 		E9AA035518B9F67E000246DE /* KNTRuleFailure.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA033D18B9F653000246DE /* KNTRuleFailure.m */; };
+		E9AA035818B9FCE5000246DE /* KNTDeallocBeforeInitRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA035718B9FCE5000246DE /* KNTDeallocBeforeInitRule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		E9AA033B18B9F653000246DE /* KNTRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTRule.m; sourceTree = "<group>"; };
 		E9AA033C18B9F653000246DE /* KNTRuleFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNTRuleFailure.h; sourceTree = "<group>"; };
 		E9AA033D18B9F653000246DE /* KNTRuleFailure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTRuleFailure.m; sourceTree = "<group>"; };
+		E9AA035618B9FCE5000246DE /* KNTDeallocBeforeInitRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNTDeallocBeforeInitRule.h; sourceTree = "<group>"; };
+		E9AA035718B9FCE5000246DE /* KNTDeallocBeforeInitRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTDeallocBeforeInitRule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +318,8 @@
 		E9AA032718B9F653000246DE /* init and dealloc */ = {
 			isa = PBXGroup;
 			children = (
+				E9AA035618B9FCE5000246DE /* KNTDeallocBeforeInitRule.h */,
+				E9AA035718B9FCE5000246DE /* KNTDeallocBeforeInitRule.m */,
 				E9AA032818B9F653000246DE /* KNTInstanceTypeNotIdRule.h */,
 				E9AA032918B9F653000246DE /* KNTInstanceTypeNotIdRule.m */,
 			);
@@ -468,6 +473,7 @@
 				E9AA034F18B9F653000246DE /* KNTRule.m in Sources */,
 				E9AA034518B9F653000246DE /* KNTNoOneLinersRule.m in Sources */,
 				E9AA028118B8D772000246DE /* main.m in Sources */,
+				E9AA035818B9FCE5000246DE /* KNTDeallocBeforeInitRule.m in Sources */,
 				E9AA033F18B9F653000246DE /* KNTArgumentParser.m in Sources */,
 				E9AA034C18B9F653000246DE /* KNTFourSpacesRule.m in Sources */,
 				E9AA034218B9F653000246DE /* NSString+KNT.m in Sources */,

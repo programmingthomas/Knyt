@@ -27,6 +27,7 @@
 #import "KNTCGGeometryRule.h"
 #import "KNTThreeLetterClassPrefixRule.h"
 #import "KNTInstanceTypeNotIdRule.h"
+#import "KNTDeallocBeforeInitRule.h"
 
 @implementation KNTFileValidator
 
@@ -45,7 +46,8 @@
                         [KNTBooleanComparisonRule class],
                         [KNTCGGeometryRule class],
                         [KNTThreeLetterClassPrefixRule class],
-                        [KNTInstanceTypeNotIdRule class]
+                        [KNTInstanceTypeNotIdRule class],
+                        [KNTDeallocBeforeInitRule class]
         ];
     });
     
