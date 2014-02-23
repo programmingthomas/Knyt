@@ -37,6 +37,7 @@
 		E9AA02FE18B92A79000246DE /* KNTApacheRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA02FD18B92A79000246DE /* KNTApacheRule.m */; };
 		E9AA030218B934A9000246DE /* KNTThreeLetterClassPrefixRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA030118B934A9000246DE /* KNTThreeLetterClassPrefixRule.m */; };
 		E9AA030318B9D97B000246DE /* KNTFileValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA02C618B8EEA1000246DE /* KNTFileValidator.m */; };
+		E9AA030718B9F289000246DE /* KNTInstanceTypeNotIdRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AA030618B9F289000246DE /* KNTInstanceTypeNotIdRule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		E9AA02FD18B92A79000246DE /* KNTApacheRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KNTApacheRule.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E9AA030018B934A9000246DE /* KNTThreeLetterClassPrefixRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KNTThreeLetterClassPrefixRule.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		E9AA030118B934A9000246DE /* KNTThreeLetterClassPrefixRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KNTThreeLetterClassPrefixRule.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E9AA030518B9F289000246DE /* KNTInstanceTypeNotIdRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNTInstanceTypeNotIdRule.h; sourceTree = "<group>"; };
+		E9AA030618B9F289000246DE /* KNTInstanceTypeNotIdRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNTInstanceTypeNotIdRule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +240,7 @@
 				E9AA02E018B90A2C000246DE /* Methods */,
 				E9AA02FF18B9348C000246DE /* Naming */,
 				E9AA02E418B90C9F000246DE /* Conditionals */,
+				E9AA030418B9F26E000246DE /* init and dealloc */,
 				E9AA02F718B91B53000246DE /* CGGeometry functions */,
 				E9AA02E818B9107D000246DE /* Enumerated types */,
 				E9AA02EC18B91569000246DE /* Booleans */,
@@ -345,6 +349,15 @@
 			name = Naming;
 			sourceTree = "<group>";
 		};
+		E9AA030418B9F26E000246DE /* init and dealloc */ = {
+			isa = PBXGroup;
+			children = (
+				E9AA030518B9F289000246DE /* KNTInstanceTypeNotIdRule.h */,
+				E9AA030618B9F289000246DE /* KNTInstanceTypeNotIdRule.m */,
+			);
+			name = "init and dealloc";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -446,6 +459,7 @@
 				E9AA02C718B8EEA1000246DE /* KNTFileValidator.m in Sources */,
 				E9AA02CE18B8F19B000246DE /* KNTRule.m in Sources */,
 				E9AA02E718B90CB7000246DE /* KNTNoOneLinersRule.m in Sources */,
+				E9AA030718B9F289000246DE /* KNTInstanceTypeNotIdRule.m in Sources */,
 				E9AA02E318B90A6F000246DE /* KNTBraceNotOnNewlineRule.m in Sources */,
 				E9AA028D18B8D982000246DE /* KNTArgumentParser.m in Sources */,
 				E9AA029318B8DE36000246DE /* KNTArgument.m in Sources */,

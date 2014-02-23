@@ -13,6 +13,7 @@ Knyt is a command line tool written in Objective-C that parses Objective-C files
 * `CGGeometry` functions are used in place of directly accessing size or origin of rectangles
 * `NS_ENUM()` is used in place of `enum`
 * Comparisons to `YES`, `NO` and `nil` don't happen
+* `instancetype` is returned by init methods rather than `id`
 * Optional: Apache license in current form at the top of files
 
 Knyt won't support checking for all of the rules described in the style guide, especially where it is difficult to identify failures (such as dot syntax being used or not used for something that is or isn't a property) or the rules aren't strict (such as the rules for ternery operators). Most of the checking is done with regular expressions.
