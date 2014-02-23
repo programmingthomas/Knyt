@@ -20,8 +20,8 @@
 
 + (NSArray*)validateSource:(NSString *)source filename:(NSString *)filename {
     //Double backslash used for escaping
-    NSRegularExpression * origin = [NSRegularExpression regularExpressionWithPattern:@"\\.origin\\.(x|y)" options:0 error:nil];
-    NSRegularExpression * size = [NSRegularExpression regularExpressionWithPattern:@"\\.size\\.(width|height)" options:0 error:nil];
+    NSRegularExpression * origin = RX(@"\\.origin\\.(x|y)");
+    NSRegularExpression * size = RX(@"\\.size\\.(width|height)");
     return [KNTRule validateLines:source rule:^NSString *(NSString *line, NSUInteger lineNumber, BOOL *stop) {
         if ([origin hasAnyMatches:line]) {
             return @"Use CGRectGetMinX/MinY instead of rectangle origin";

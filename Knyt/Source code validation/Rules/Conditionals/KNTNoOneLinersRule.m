@@ -23,8 +23,8 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        allButElseRegex = [NSRegularExpression regularExpressionWithPattern:@"(^|(\\s){1,})(if|else if|while|for|switch)(\\s){0,}\\(" options:0 error:nil];
-        elseRegex = [NSRegularExpression regularExpressionWithPattern:@"else(\\s){0,}\\{" options:0 error:nil];
+        allButElseRegex = RX(@"(^|(\\s){1,})(if|else if|while|for|switch)(\\s){0,}\\(");
+        elseRegex = RX(@"else(\\s){0,}\\{");
     });
     
     return [KNTRule validateLines:source rule:^NSString *(NSString *line, NSUInteger lineNumber, BOOL *stop) {

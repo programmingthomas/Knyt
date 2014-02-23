@@ -23,7 +23,7 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        regex = [NSRegularExpression regularExpressionWithPattern:@"^[\\s]*.?-[\\s]*.?\\(id\\)init" options:NSRegularExpressionDotMatchesLineSeparators error:nil];
+        regex = RX(@"^[\\s]*.?-[\\s]*.?\\(id\\)init");
     });
     
     return [KNTRule validateLines:source rule:^NSString *(NSString *line, NSUInteger lineNumber, BOOL *stop) {

@@ -23,10 +23,10 @@
     if ([filename hasSuffix:@".m"]) {
         
         //Regular expressions
-        NSRegularExpression * implementation = [NSRegularExpression regularExpressionWithPattern:@"^[\\s]*.?@implementation" options:0 error:nil];
-        NSRegularExpression * end = [NSRegularExpression regularExpressionWithPattern:@"^[\\s]*.?@end" options:0 error:nil];
-        NSRegularExpression * dealloc = [NSRegularExpression regularExpressionWithPattern:@"^[\\s]*.?-[\\s]*.?\\(void\\)dealloc" options:0 error:nil];
-        NSRegularExpression * init = [NSRegularExpression regularExpressionWithPattern:@"^[\\s]*.?-[\\s]*.?\\((id|instancetype)\\)init" options:0 error:nil];
+        NSRegularExpression * implementation = RX(@"^[\\s]*.?@implementation");
+        NSRegularExpression * end = RX(@"^[\\s]*.?@end");
+        NSRegularExpression * dealloc = RX(@"^[\\s]*.?-[\\s]*.?\\(void\\)dealloc");
+        NSRegularExpression * init = RX(@"^[\\s]*.?-[\\s]*.?\\((id|instancetype)\\)init");
         
         NSArray * lines = [KNTRule lines:source];
         NSMutableArray * failures = [NSMutableArray new];

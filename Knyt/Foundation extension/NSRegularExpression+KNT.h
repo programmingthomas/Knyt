@@ -18,6 +18,8 @@
 
 #import "NSString+KNT.h"
 
+#define RX(expr) [NSRegularExpression regularExpressionWithPattern:expr options:0 error:nil]
+
 @interface NSRegularExpression (KNT)
 
 /**

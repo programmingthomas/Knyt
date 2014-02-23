@@ -19,7 +19,7 @@
 @implementation KNTEnumRule
 
 + (NSArray*)validateSource:(NSString *)source filename:(NSString *)filename {
-    NSRegularExpression * regex = [NSRegularExpression regularExpressionWithPattern:@"enum( |{)" options:0 error:nil];
+    NSRegularExpression * regex = RX(@"enum( |{)");
     return [KNTRule validateLines:source rule:^NSString *(NSString *line, NSUInteger lineNumber, BOOL *stop) {
         if ([regex hasAnyMatches:line]) {
             return @"NS_ENUM(type,name) recommended instead of enum";

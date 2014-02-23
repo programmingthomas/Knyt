@@ -23,7 +23,7 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        interfaceWithPrefix = [NSRegularExpression regularExpressionWithPattern:@"@(interface|protocol|implementation)[\\s][A-Z]{3,}" options:NSRegularExpressionAnchorsMatchLines error:nil];
+        interfaceWithPrefix = RX(@"@(interface|protocol|implementation)[\\s][A-Z]{3,}");
     });
     
     return [KNTRule validateLines:source rule:^NSString *(NSString *line, NSUInteger lineNumber, BOOL *stop) {
