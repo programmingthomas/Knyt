@@ -88,4 +88,7 @@ void print_failures(NSArray * failures) {
     for (KNTRuleFailure * failure in allFailures) {
         printf("%s\n", failure.description.UTF8String);
     }
+    if (allFailures.count) {
+        printf("Total of %d failures\n", (int)allFailures.count);
+    }
 }
