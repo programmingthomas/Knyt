@@ -1,4 +1,4 @@
-// KNTDefinedConstantsRule.h
+// KNTDefinedConstantsRule.m
 //
 // Copyright 2014 Programming Thomas
 //

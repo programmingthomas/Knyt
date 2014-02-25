@@ -19,18 +19,25 @@
 @implementation KNTThreeLetterClassPrefixRule
 
 + (NSArray*)validateSource:(NSString *)source filename:(NSString *)filename {
+    //Xcode's unit tests seem to create names using Product_NameTests as the class name, so I'll ignore those
+    if ([filename hasSuffix:@"Tests.m"]) {
+        return nil;
+    }
+    
     static NSRegularExpression * interfaceWithPrefix;
+    static NSRegularExpression * interfaceWithCategory;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         interfaceWithPrefix = RX(@"@(interface|protocol|implementation)[\\s][A-Z]{3,}");
+        interfaceWithCategory = RX(@"@(interface|protocol|implementation)[\\s][A-z]{0,}[\\s]\\(");
     });
     
     return [KNTRule validateLines:source rule:^NSString *(NSString *line, NSUInteger lineNumber, BOOL *stop) {
         NSString * trimmedLine = [line stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        if ([trimmedLine hasPrefix:@"@interface"] || [trimmedLine hasPrefix:@"@interface"] || [trimmedLine hasPrefix:@"@protocol"]) {
-            NSTextCheckingResult * match = [interfaceWithPrefix firstMatchInString:line options:NSMatchingAnchored range:line.range];
-            if (!match) {
+        if ([trimmedLine hasPrefix:@"@interface"] || [trimmedLine hasPrefix:@"@implementation"] || [trimmedLine hasPrefix:@"@protocol"]) {
+            //Fail if it is not a category and it doesn't have a three letter prefix
+            if (![interfaceWithPrefix hasAnyMatches:trimmedLine] && ![interfaceWithCategory hasAnyMatches:trimmedLine]) {
                 return @"Class or protocol definition doesn't use a three uppercase character prefix";
             }
         }
